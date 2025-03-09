@@ -1,0 +1,60 @@
+title: blocklet-project
+description: A Blocklet DAPP blocklet
+keywords:
+  - blocklet
+  - react
+group: dapp
+did: z2qa3DxWBrCohKywQNmWP8HCP75BWmGjNuoz8
+main: api/dist/index.js
+author:
+  name: lijun
+  email: lijunwork95@gmail.com
+repository:
+  type: git
+  url: git+https://github.com/blocklet/create-blocklet.git
+specVersion: 1.2.8
+version: 0.1.0
+logo: logo.png
+files:
+  - dist
+  - logo.png
+  - screenshots
+interfaces:
+  - type: web
+    services:
+      - name: auth # 该访问接口的 Auth 服务
+        config:
+          whoCanAccess: all # 谁可以访问 (可以在应用安装后动态修改)
+          blockUnauthenticated: false # 是否自动拦截未登录的请求, 并跳转到登录页 (默认: false)
+          blockUnauthorized: false # 是否自动拦截未授权的请求 (默认: false)
+          allowSwitchProfile: true # 是否支持切换 Profile (默认: true)
+          profileFields: # 登录时需要提供的信息
+            - fullName
+            - email
+            - avatar
+          ignoreUrls: [] # 哪些接口允许任何请求访问
+    # 以下配置和 auth 无关
+    name: publicUrl
+    path: /
+    prefix: "*"
+    port: BLOCKLET_PORT
+    protocol: http
+community: ""
+documentation: ""
+homepage: ""
+license: ""
+payment:
+  price: []
+  share: []
+timeout:
+  start: 60
+requirements:
+  server: ">=1.16.28"
+  os: "*"
+  cpu: "*"
+scripts:
+  dev: npm run start
+environments: []
+capabilities: {}
+screenshots: []
+components: []
