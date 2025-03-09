@@ -115,5 +115,9 @@
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
   },
-  "packageManager": "pnpm@8.12.1+sha1.aa961ffce9b6eaa56307d9b5ff7e984f25b7eb58"
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.12.0"
+  },
+  "packageManager": "pnpm@8.12.1"
 }
